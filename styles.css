@@ -1708,3 +1708,170 @@ margin-bottom: 20px;
         padding: 6px 14px !important;
     }
 }
+/* ===== 生徒の受賞歴（中央寄せ・左寄り解消） ===== */
+.awards-list {
+  list-style: none;
+  padding: 0;
+  margin: 18px auto 0;
+  max-width: 720px;     /* 横幅を絞って中央に見せる */
+  text-align: center;   /* 文字も中央 */
+}
+
+.awards-list li {
+  padding: 14px 10px;
+  margin: 0 auto 10px;
+  border-bottom: 1px solid #f0eded;
+}
+
+.awards-list li::before {
+  display: none;        /* 左の●は消す（左寄りの原因） */
+}
+
+.career-note {
+  text-align: center;
+  margin-top: 18px;
+  color: #555;
+  line-height: 1.9;
+}
+/* 教室行事：読みやすく中央寄せ */
+.events-note,
+.events-list {
+  text-align: center;
+}
+
+.events-list {
+  list-style: none;
+  padding: 0;
+  margin: 14px auto 0;
+}
+
+.events-list li::before {
+  display: none; /* 左の●を消して中央感UP */
+}
+/* FEATURE リード文 */
+.feature-lead {
+    max-width: 720px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: #555;
+    line-height: 1.9;
+    font-size: 16.5px;
+}
+
+.feature-lead p {
+    margin-bottom: 14px;
+}
+/* ===== FAQ ===== */
+.faq-page {
+  max-width: 900px;
+  margin: 10px auto 60px;
+  padding: 0 20px;
+}
+
+.faq-block {
+  background: #ffffff;
+  padding: 28px 22px;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.04);
+  margin-bottom: 22px;
+}
+
+.faq-subtitle {
+  font-size: 20px;
+  margin: 0 0 16px;
+  padding-left: 14px;
+  border-left: 4px solid #ff9b9b;
+  color: #333;
+  letter-spacing: 0.5px;
+}
+
+/* 開閉アイテム */
+.faq-item {
+  border-top: 1px solid #f0eded;
+  padding: 10px 0;
+}
+
+.faq-item:last-child {
+  border-bottom: 1px solid #f0eded;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+  color: #444;
+  line-height: 1.6;
+  padding: 10px 8px;
+  position: relative;
+}
+
+/* Safariの三角を消す */
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+/* 右側の + / - */
+.faq-item summary::after {
+  content: "＋";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ff7b7b;
+  font-weight: 700;
+}
+
+.faq-item[open] summary::after {
+  content: "－";
+}
+
+.faq-answer {
+  padding: 0 8px 12px;
+  color: #555;
+  line-height: 1.9;
+}
+
+.faq-answer p {
+  margin: 8px 0 0;
+}
+
+/* 箇条書き */
+.faq-list {
+  margin: 10px auto 0;
+  padding-left: 0;
+  list-style: none;
+  max-width: 680px;
+}
+
+.faq-list li {
+  position: relative;
+  padding-left: 18px;
+  margin: 8px 0;
+}
+
+.faq-list li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #ff9b9b;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+
+/* CTA */
+.faq-cta {
+  text-align: center;
+  margin-top: 18px;
+}
+
+/* スマホ調整 */
+@media (max-width: 700px) {
+  .faq-block {
+    padding: 22px 16px;
+  }
+  .faq-item summary {
+    padding-right: 34px; /* + の分 */
+  }
+}
