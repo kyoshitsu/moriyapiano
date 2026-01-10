@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アクセス | もりやピアノ教室</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="site-header" id="header">
+    <div class="nav-inner">
+        <div class="nav-left">
+            <a href="index.html" class="logo">もりやピアノ教室</a>
+            <nav class="main-nav">
+                <a href="index.html">ホーム</a>
+                <a href="lessons.html">レッスン内容・料金</a>
+                <a href="profile.html">講師紹介</a>
+                <a href="efforts.html">教室の取り組み</a>
+                <a href="access.html">アクセス</a>
+            </nav>
+        </div>
+        <div class="nav-right">
+            <a href="contact.html" class="contact-btn">お問い合わせ</a>
+        </div>
+    </div>
+</header>
+<!-- ★ ここを入れれば全ページ直る！！ -->
+
+
+<section class="access-page">
+
+    <h1 class="page-title">アクセス</h1>
+
+    <div class="access-flex">
+
+        <div class="access-left">
+
+            <div class="access-item">
+                <h2>所在地</h2>
+                <p>岩手県一関市花泉町金沢字運南田21</p>
+            </div>
+
+            <div class="access-item">
+                <h2>最寄り駅</h2>
+                <p>JR東北本線「清水原駅」より徒歩約10〜11分</p>
+            </div>
+
+            <div class="access-item">
+                <h2>駐車場</h2>
+                <p>敷地内に駐車スペースがあります。</p>
+            </div>
+
+        </div>
+
+        <div class="access-right">
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3106.813848989647!2d141.16107929999998!3d38.85961790000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f88dea7e868561b%3A0xc482ab8e10a6ae4d!2z44KC44KK44KE44OU44Ki44OO5pWZ5a6k!5e0!3m2!1sja!2sjp!4v1764380738434!5m2!1sja!2sjp"
+                    width="100%" height="350" style="border:0;" 
+                    allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+document.addEventListener("scroll", function() {
+    const header = document.getElementById("header");
+    if (window.scrollY > 20) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+</script>
+
+</body>
+</html>

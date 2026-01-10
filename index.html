@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>もりやピアノ教室</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<a href="contact.html" class="floating-contact">
+お問い合わせはこちら
+</a>
+<body>
+<!-- ★ サイト最上部のロゴ帯 ★ -->
+<div class="site-top-logo">
+    もりやピアノ教室
+</div>
+    <!-- 🌟 ここにメニューを入れる！ -->
+ <header class="site-header" id="header">
+    <div class="nav-inner">
+
+        <div class="nav-left">
+            <a href="index.html" class="logo">もりやピアノ教室</a>
+
+            <nav class="main-nav">
+                <a href="index.html">ホーム</a>
+                <a href="lessons.html">レッスン内容・料金</a>
+                <a href="profile.html">講師紹介</a>
+                <a href="efforts.html">教室の取り組み</a>
+                <a href="access.html">アクセス</a>
+            </nav>
+        </div>
+
+        <div class="nav-right">
+            <a href="contact.html" class="contact-btn">お問い合わせ</a>
+        </div>
+
+    </div>
+</header>
+
+
+<!-- HERO（背景画像＋中央テキスト） -->
+<section class="hero hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-center">
+        <h1>もりやピアノ教室</h1>
+        <p class="sub">
+            3歳〜大人まで。<br>
+            やさしく、楽しく、<br>
+            続けられるレッスン。
+        </p>
+        <a href="contact.html" class="cta">体験レッスンはこちら</a>
+    </div>
+</section>
+
+    </div>
+</section>
+<!-- FEATURE（特徴） -->
+<section class="feature">
+    <h2><span>FEATURE</span><br>もりやピアノ教室の特徴</h2>
+
+    <div class="feature-cards">
+
+        <div class="card fade-in">
+            <h3>オーダーメイドレッスン</h3>
+            <p>一人ひとりのペースに合わせて丁寧に指導します。</p>
+        </div>
+
+        <div class="card">
+            <h3>幅広い年齢に対応</h3>
+            <p>3歳〜70代まで、生徒さんの目的に合わせたサポート。</p>
+        </div>
+
+        <div class="card">
+            <h3>コンクール・グレード対応</h3>
+            <p>受験・グレード・コンクールにも対応しています。</p>
+        </div>
+
+    </div>
+</section>
+<!-- BLOG PREVIEW（最新ブログ） -->
+<section class="home-blog fade-in">
+    <h2><span>BLOG</span><br>最新ブログ</h2>
+
+    <div id="blog-list" class="blog-cards">
+        <p>読み込み中…</p>
+    </div>
+
+    <p style="text-align:center; margin-top:10px;">
+        <a href="https://moriyamusic.hatenablog.com/" target="_blank" class="cta">
+            ブログ一覧を見る
+        </a>
+    </p>
+</section>
+<!-- VIDEO PREVIEW（動画ギャラリーへの導線） -->
+<section class="home-video fade-in">
+    <h2><span>VIDEO</span><br>演奏動画</h2>
+
+    <div class="video-wrapper">
+       <iframe width="560" height="315" src="https://www.youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <p style="text-align:center; margin-top:20px;">
+        <a href="video.html" class="cta">動画ギャラリーを見る</a>
+    </p>
+</section>
+<!-- GALLERY PREVIEW（教室の様子） -->
+<section class="home-gallery">
+    <h2><span>GALLERY</span><br>教室の様子</h2>
+
+   <div class="gallery-preview">
+    <img src="images/kanban.jpg" alt="">
+    <img src="images/kyoshitsu1.jpg" alt="">
+</div>
+
+    <p style="text-align:center; margin-top:20px;">
+        <a href="gallery.html" class="cta">もっと見る</a>
+    </p>
+</section>
+<!-- COURSES（料金） -->
+<section class="courses">
+    <h2><span>COURSES</span><br>レッスン料金</h2>
+
+    <div class="course-cards">
+        <div class="course-card fade-in">
+            <p>レッスンの料金・コース内容はこちらからご確認いただけます。</p>
+            <a href="lessons.html" class="cta" style="margin-top: 10px; display: inline-block;">
+                レッスン料金ページへ
+            </a>
+        </div>
+    </div>
+</section>
+<!-- ACCESS（アクセス） -->
+<section class="access-page">
+
+    <h1 class="page-title">アクセス</h1>
+
+    <div class="access-item">
+        <h2>所在地</h2>
+        <p>岩手県一関市花泉町金沢字運南田21</p>
+    </div>
+
+</section>
+
+<script>
+document.addEventListener("scroll", function() {
+    const header = document.getElementById("header");
+    if (window.scrollY > 20) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+</script>
+<script>
+// スクロールでふわっと
+const fadeElems = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+fadeElems.forEach(elem => observer.observe(elem));
+</script>
+<script>
+// ======= はてなブログ RSS：2030年の記事は除外 =======
+const blogURL = "https://moriyamusic.hatenablog.com/rss";
+
+fetch(blogURL)
+  .then(response => response.text())
+  .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+  .then(data => {
+    const items = data.querySelectorAll("item");
+    let html = "";
+    let count = 0;  // ← 表示した記事数
+
+    const now = new Date();
+
+    items.forEach(item => {
+
+      const pubDate = new Date(item.querySelector("pubDate").textContent);
+      const year = pubDate.getFullYear();
+
+      // ⭐ 2030の記事はスキップ（固定記事）
+      if (year === 2030) return;
+
+      // ⭐ 最新3件だけ採用
+      if (count >= 3) return;
+
+      const title = item.querySelector("title").textContent;
+      const link = item.querySelector("link").textContent;
+
+      // 日付整形
+      const dateStr =
+        `${pubDate.getFullYear()}年${pubDate.getMonth()+1}月${pubDate.getDate()}日`;
+
+      // NEW判定（3日以内）
+      const diff = (now - pubDate) / (1000 * 60 * 60 * 24);
+      const isNew = diff <= 5;
+
+     html += `
+  <div class="blog-item">
+      <div class="blog-left">
+          <a href="${link}" target="_blank">${title}</a>
+          ${isNew ? '<span class="new-badge">NEW</span>' : ""}
+      </div>
+      <span class="blog-date">${dateStr}</span>
+  </div>
+`;
+
+      count++;
+    });
+
+    document.getElementById("blog-list").innerHTML = html;
+  });
+</script>
+
+</body>
+</html>

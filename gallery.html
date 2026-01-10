@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ギャラリー | もりやピアノ教室</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<header class="site-header" id="header">
+    <div class="nav-inner">
+
+        <div class="nav-left">
+            <a href="index.html" class="logo">もりやピアノ教室</a>
+
+            <nav class="main-nav">
+                <a href="index.html">ホーム</a>
+                <a href="lessons.html">レッスン内容・料金</a>
+                <a href="profile.html">講師紹介</a>
+                <a href="efforts.html">教室の取り組み</a>
+                <a href="access.html">アクセス</a>
+            </nav>
+        </div>
+
+        <div class="nav-right">
+            <a href="contact.html" class="contact-btn">お問い合わせ</a>
+        </div>
+
+    </div>
+</header>
+
+<script>
+document.addEventListener("scroll", function() {
+    const header = document.getElementById("header");
+    if (window.scrollY > 20) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+</script>
+<body>
+
+<section class="gallery-page">
+
+    <div class="gallery-header">
+        <h1>教室の様子</h1>
+    </div>
+
+    <!-- 教室全体 -->
+    <div class="gallery-group">
+        <h2>教室の雰囲気</h2>
+        <div class="gallery-grid">
+            <img src="images/classroom1.jpg" alt="教室の写真1">
+            <img src="images/classroom2.jpg" alt="教室の写真2">
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>

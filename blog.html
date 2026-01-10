@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブログ | もりやピアノ教室</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header" id="header">
+    <div class="nav-inner">
+        <div class="nav-left">
+            <a href="index.html" class="logo">もりやピアノ教室</a>
+            <nav class="main-nav">
+                <a href="index.html">ホーム</a>
+                <a href="lessons.html">レッスン内容・料金</a>
+                <a href="profile.html">講師紹介</a>
+                <a href="efforts.html">教室の取り組み</a>
+                <a href="access.html">アクセス</a>
+            </nav>
+        </div>
+        <div class="nav-right">
+            <a href="contact.html" class="contact-btn">お問い合わせ</a>
+        </div>
+    </div>
+</header>
+
+<section class="blog-page fade-in">
+    <h1>ブログ</h1>
+
+    <p class="blog-info">
+        外部サイト「はてなブログ」で更新しています。<br>
+        最新記事は下のリンクからご覧ください。
+    </p>
+
+    <div class="blog-button-area">
+        <a href="https://あなたのお母さんのブログURL" class="cta" target="_blank">
+            ブログを読む
+        </a>
+    </div>
+</section>
+
+<script>
+// ナビのスクロール
+document.addEventListener("scroll", function() {
+    const header = document.getElementById("header");
+    if (window.scrollY > 20) header.classList.add("scrolled");
+    else header.classList.remove("scrolled");
+});
+</script>
+
+</body>
+</html>
