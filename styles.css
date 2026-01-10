@@ -1583,43 +1583,44 @@ margin-bottom: 20px;
 }
 
 /* ===========================
-   スマホ用：2段できれいに並ぶメニュー
+   スマホ用：メニューを2段に寄せる
    =========================== */
 @media (max-width: 750px) {
 
   .nav-inner {
-      flex-direction: column;
-      align-items: center;
-      padding: 12px 0;
-      gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0;     /* 12px → 8px */
+    gap: 6px;           /* 10px → 6px */
   }
 
-  /* メニュー全体を折り返しOKにする */
   .main-nav {
-      display: flex;
-      flex-wrap: wrap;        /* ★ 横並び → 自動で折り返し */
-      justify-content: center;
-      gap: 10px 14px;         /* 上下・左右の余白 */
-      width: 100%;
-      padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 6px 8px;       /* ★ 10px 14px → 詰める */
+    width: 100%;
+    padding: 0 6px;     /* 0 10px → 詰める */
+    margin: 0;
   }
 
-  /* 各ボタン（グレーで丸いボタン） */
   .main-nav a {
-      background: #e5e5e5;
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 15px;
-      font-weight: 600;
-      color: #444;
-      text-decoration: none;
-      display: inline-block;
-      white-space: nowrap; /* ← 文字が折れないように */
+    background: #e5e5e5;
+    padding: 6px 10px;  /* ★ 8px 16px → 詰める */
+    border-radius: 18px;
+    font-size: 13px;    /* ★ 15px → 小さめ */
+    font-weight: 600;
+    color: #444;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+    letter-spacing: 0;  /* ★ 文字間も詰める */
   }
 
-  /* スマホでは固定ヘッダーを解除（下の内容が動きやすいように） */
+  /* スマホでは固定ヘッダーを解除 */
   .site-header {
-      position: static;
+    position: static;
   }
 }
 /* ==========================
