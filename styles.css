@@ -1923,3 +1923,72 @@ margin-bottom: 20px;
     white-space: nowrap;
   }
 }
+/* =========================
+   スマホ：演奏動画セクションの余白を詰める
+   ========================= */
+@media (max-width: 600px) {
+
+  /* セクション全体の上下余白 */
+  .home-video {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    padding-top: 20px !important;
+    padding-bottom: 10px !important;
+  }
+
+  /* 見出しと動画の間 */
+  .home-video h2 {
+    margin-bottom: 16px !important;
+  }
+
+  /* 動画とボタンの間 */
+  .home-video p {
+    margin-top: 10px !important;
+  }
+}/* ==========================
+   スマホ版：演奏動画セクションの余白をなくす
+   ========================== */
+@media (max-width: 750px) {
+
+  /* セクション全体の上下余白を消す */
+  .home-video {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 見出しの上下余白を詰める（ほぼゼロ） */
+  .home-video h2 {
+    margin: 0 0 8px !important;
+  }
+
+  /* 動画ラッパー周りの余白を消す */
+  .home-video .video-wrapper {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 下のボタンとの余白も最小に */
+  .home-video p {
+    margin-top: 6px !important;
+  }
+}
+/* スマホ：演奏動画セクションの上下の空白を完全に消す */
+@media (max-width: 750px) {
+  section.home-video {
+    padding: 0 !important;
+    margin: -50px 0 !important; /* ← 直前/直後sectionの 50px を相殺 */
+  }
+
+  section.home-video h2 {
+    margin: 0 0 6px !important;
+  }
+
+  section.home-video .video-wrapper {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  section.home-video p {
+    margin: 6px 0 0 !important;
+  }
+}
